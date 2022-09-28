@@ -87,7 +87,7 @@ function Header() {
                     <Button white leftIcon={<FontAwesomeIcon className={cx('upload')} icon={faPlus} />}>
                         Upload
                     </Button>
-                    <Button primary>Login</Button>
+                    <Button primary>Log in</Button>
                     <Menu items={MENU_ITEMS}>
                         <button className={cx('more-btn')}>
                             <FontAwesomeIcon icon={faEllipsisVertical} />
