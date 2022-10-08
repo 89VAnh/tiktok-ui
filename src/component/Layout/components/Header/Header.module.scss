@@ -16,85 +16,10 @@
     justify-content: space-between;
 }
 
-.search,
-.search-result {
-    width: 361px;
-}
-.search {
-    position: relative;
-    display: flex;
-    align-items: center;
-    height: 46px;
-    background-color: rgba(22, 24, 35, 0.06);
-    border-radius: var(--search-border-radius);
-    padding-left: 16px;
-    overflow: hidden;
-
-    input {
-        flex: 1;
-        height: 100%;
-        color: var(--black);
-        font-size: 1.6rem;
-        background-color: transparent;
-        caret-color: var(--primary-color);
-    }
-    input:not(:placeholder-shown) ~ .search-btn {
-        color: rgba(22, 24, 35, 0.75);
-    }
-    input:focus-within ~ .border-search {
-        display: block;
-    }
-}
-.search-title {
-    font-size: 1.4rem;
-    font-weight: 600;
-    padding: 5px 12px;
-    color: rgba(22, 24, 35, 0.5);
-}
-
-.span-spliter {
-    height: 28px;
-    width: 1px;
-    background-color: rgba(22, 24, 35, 0.12);
-}
-.clear,
-.loading {
-    position: absolute;
-    right: 68px;
-    color: rgba(22, 24, 35, 0.34);
-}
-.search-btn {
-    width: 52px;
-    height: 100%;
-    font-size: 1.8rem;
-    color: rgba(22, 24, 35, 0.34);
-    padding-right: 4px;
-    background-color: transparent;
-
-    &:hover {
-        cursor: pointer;
-        background: rgba(22, 24, 35, 0.03);
-    }
-    &:active {
-        background-color: rgba(22, 24, 35, 0.06);
-        transition: background-color 0s;
-    }
-}
-.border-search {
-    display: none;
-    position: absolute;
-    left: 0;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    border: 1.5px solid rgba(22, 24, 35, 0.2);
-    border-radius: 92px;
-    z-index: -1;
-}
-
 .actions {
     display: flex;
     align-items: center;
+    gap: 24px;
 }
 
 .more-btn {
@@ -106,18 +31,31 @@
 }
 
 .action-btn {
+    position: relative;
+    display: inline-flex;
     font-size: 2.4rem;
     color: #161823;
     background-color: transparent;
-    padding: 4px 12px;
     cursor: pointer;
 }
-
+.badge {
+    position: absolute;
+    top: -6px;
+    right: -12px;
+    padding: 0px 6px;
+    height: 2rem;
+    line-height: 2rem;
+    border-radius: 10px;
+    font-size: 1.4rem;
+    font-weight: 600;
+    color: var(--white);
+    font-family: 'ProximaNova', sans-serif;
+    background-color: var(--primary);
+}
 .user-avatar {
     width: 32px;
     height: 32px;
     object-fit: cover;
     border-radius: 50%;
-    margin-left: 12px;
     cursor: pointer;
 }
