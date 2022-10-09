@@ -25,7 +25,10 @@
 .actions {
     display: flex;
     align-items: center;
-    gap: 24px;
+
+    &:has(.user-avatar) {
+        gap: 24px;
+    }
 }
 
 .more-btn {
