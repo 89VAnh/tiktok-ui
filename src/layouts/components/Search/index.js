@@ -45,7 +45,7 @@ function Search() {
         fetchApi();
     }, [debounced]);
 
-    const handlClear = () => {
+    const handleClear = () => {
         setSearchValue('');
         setSearchResult([]);
         inputRef.current.focus();
@@ -54,7 +54,7 @@ function Search() {
     const handelHideResults = () => {
         setShowResults(false);
     };
-    const handleChage = (e) => {
+    const handleChange = (e) => {
         const searchValue = e.target.value;
         if (!searchValue.startsWith(' ')) setSearchValue(searchValue);
     };
@@ -83,18 +83,18 @@ function Search() {
                         value={searchValue}
                         placeholder="Search accounts and videos"
                         spellCheck={false}
-                        onChange={handleChage}
+                        onChange={handleChange}
                         onFocus={() => {
                             setShowResults(true);
                         }}
                     />
                     {!!searchValue && !loading && (
-                        <button className={cx('clear')} onClick={handlClear}>
+                        <button className={cx('clear')} onClick={handleClear}>
                             <FontAwesomeIcon icon={faCircleXmark} />
                         </button>
                     )}
                     {loading && <FontAwesomeIcon className={cx('loading')} icon={faSpinner} />}
-                    <span className={cx('span-spliter')}></span>
+                    <span className={cx('span-splitter')}></span>
 
                     <button className={cx('search-btn')}>
                         <SearchIcon />
