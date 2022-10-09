@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom';
 import classNames from 'classnames/bind';
 
 import Tippy from '@tippyjs/react';
@@ -10,6 +11,7 @@ import { faUser } from '@fortawesome/free-regular-svg-icons';
 import styles from './Header.module.scss';
 import images from '~/assets/images';
 
+import routesConfig from '~/config/routes';
 import Button from '~/component/Button';
 import Menu from '~/component/Popper/Menu';
 import {
@@ -61,7 +63,6 @@ function Header() {
     const currentUser = true;
 
     const handleMenuChange = (menuItem) => {
-        console.log(menuItem);
         switch (menuItem.type) {
             case 'language':
                 break;
@@ -98,7 +99,10 @@ function Header() {
     return (
         <header className={cx('wrapper')}>
             <div className={cx('inner')}>
-                <img src={images.logo} alt="TikTok" />
+                <Link to={routesConfig.home} className={cx('logo-link')}>
+                    {' '}
+                    <img src={images.logo} alt="TikTok" />
+                </Link>
                 <Search />
                 <div className={cx('actions')}>
                     <Button white leftIcon={<FontAwesomeIcon icon={faPlus} />}>
