@@ -20,6 +20,7 @@ import {
     InboxIcon,
     KeyboardIcon,
     LanguageIcon,
+    LiveIcon,
     MessageIcon,
     SettingIcon,
 } from '~/component/Icons/Icons';
@@ -83,6 +84,11 @@ function Header() {
             to: '/coins',
         },
         {
+            icon: <LiveIcon />,
+            title: 'LIVE studio',
+            to: '/live',
+        },
+        {
             icon: <SettingIcon />,
             title: 'Settings',
             to: '/settings',
@@ -111,7 +117,7 @@ function Header() {
                     {currentUser ? (
                         <>
                             <Tippy delay={[0, 200]} content="Messages">
-                                <button className={cx('action-btn')}>
+                                <button className={cx('action-btn')} style={{ padding: 3 }}>
                                     <MessageIcon />
                                 </button>
                             </Tippy>

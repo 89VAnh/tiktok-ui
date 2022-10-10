@@ -13,7 +13,7 @@
 .inner {
     width: 100%;
     width: var(--default-layout-width);
-    padding: 0 var(--default-layout-horizontal-spacer);
+    padding: 0 var(--default-layout-horizontal-spacer) 0 20px;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -27,7 +27,7 @@
     align-items: center;
 
     &:has(.user-avatar) {
-        gap: 24px;
+        gap: 16px;
     }
 }
 
@@ -64,6 +64,7 @@
 .user-avatar {
     width: 32px;
     height: 32px;
+    margin-left: 8px;
     object-fit: cover;
     border-radius: 50%;
     cursor: pointer;
