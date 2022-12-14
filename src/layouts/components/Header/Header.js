@@ -1,19 +1,17 @@
-import { Link } from 'react-router-dom';
 import classNames from 'classnames/bind';
+import { Link } from 'react-router-dom';
 
 import Tippy from '@tippyjs/react';
 import 'tippy.js/dist/tippy.css';
 
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faPlus, faEllipsisVertical, faSignOut } from '@fortawesome/free-solid-svg-icons';
 import { faUser } from '@fortawesome/free-regular-svg-icons';
+import { faEllipsisVertical, faPlus, faSignOut } from '@fortawesome/free-solid-svg-icons';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
-import styles from './Header.module.scss';
 import images from '~/assets/images';
+import styles from './Header.module.scss';
 
-import config from '~/config';
 import Button from '~/component/Button/Button';
-import Menu from '~/component/Popper/Menu';
 import {
     CoinIcon,
     FeedbackIcon,
@@ -25,6 +23,8 @@ import {
     SettingIcon,
 } from '~/component/Icons/Icons';
 import Image from '~/component/Image';
+import Menu from '~/component/Popper/Menu';
+import config from '~/config';
 import Search from '../Search';
 
 const cx = classNames.bind(styles);
